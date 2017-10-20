@@ -8,6 +8,10 @@ function formatKey(key) {
   return key_words.join(" ");
 }
 
+function formatPhone(phoneNumber) {
+  return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
+}
+
 // Responsible for displaying the information for each Doctor Search result item.
 function displayDoctor(result) {
   console.log(result);
@@ -31,7 +35,7 @@ function displayDoctor(result) {
 
     $(`#${result.npi} ul li`).last().append(`<h5>Phones:</h5>`);
     practice.phones.forEach(function(phone) {
-      $(`#${result.npi} ul li`).last().append(`<p class="phone"><strong>${formatKey(phone.type)}:</strong> ${phone.number}</p>`);
+      $(`#${result.npi} ul li`).last().append(`<p class="phone"><strong>${formatKey(phone.type)}:</strong> ${formatPhone(phone.number)}</p>`);
     });
 
     $(`#${result.npi} ul li`).last().append(`<h5>Website:</h5>`);
