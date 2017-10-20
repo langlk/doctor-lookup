@@ -25,7 +25,7 @@ function displayDoctor(result) {
   result.practices.forEach(function(practice) {
     $(`#${result.npi} ul`).append(`<li><h4>${practice.name}</h4></li>`);
     let accepting = practice.accepts_new_patients ? "" : "Not";
-    $(`#${result.npi} ul li`).last().append(`<h5 class="${accepting}accepting">${accepting} Accepting New Patients</h5>`);
+    $(`#${result.npi} ul li`).last().append(`<h5 class="${accepting.toLowerCase()}accepting">${accepting} Accepting New Patients</h5>`);
 
     let street2 = practice.visit_address.street2 ? practice.visit_address.street2 : "";
     $(`#${result.npi} ul li`).last().append(`<h5>Address:</h5>
@@ -52,7 +52,7 @@ function displayDoctor(result) {
 function displayResults(results) {
   if (results.data.length > 0) {
     let plural = (results.data.length > 1) ? "s" : "";
-    $('#results').append(`<h1>${results.data.length} Doctor${plural} Found:<h1>`);
+    $('#results').append(`<h1>${results.data.length} Doctor${plural} Found<h1>`);
     results.data.forEach(function(result) {
       displayDoctor(result);
     });
