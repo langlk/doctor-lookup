@@ -81,6 +81,11 @@ body {
   margin-bottom: 1.3em;
 }
 
+.address p, .phone p, .website p {
+  margin-left: 1em;
+  margin-bottom: 3px;
+}
+
 @media screen and (max-width: 625px) {
   .container {
     width: 90%;
