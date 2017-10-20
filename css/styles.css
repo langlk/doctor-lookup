@@ -3,17 +3,15 @@ body {
   font-size: 16px;
 }
 
-h1 {
+.container {
+  width: 80%;
+}
+
+.page-header h1 {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 3.5em;
   text-align: center;
-  margin-bottom: 1.2rem; 
-}
-
-.page-header {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 1.2rem;
 }
 
 #doctor-search {
@@ -21,6 +19,7 @@ h1 {
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 1.5em;
 }
 
 #doctor-search .btn {
@@ -29,8 +28,65 @@ h1 {
   margin-right: auto;
 }
 
+#results {
+  border-top: 1px solid #eee;
+}
+
+#results h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+#results > div {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#results > div h2 {
+  font-size: 28px;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  padding: .4em 0px;
+}
+
+#results > div h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#results > div h5 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#results > div ul {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+#results > div ul li {
+  display: block;
+  padding-right: 1em;
+  padding-left: 1em;
+  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
+  margin-bottom: 1.3em;
+}
+
 @media screen and (max-width: 625px) {
-  h1 {
+  .container {
+    width: 90%;
+  }
+
+  .page-header h1 {
     font-size: 2.3em;
   }
 }
