@@ -50,18 +50,18 @@ function displayDoctor(result) {
 function displayResults(results) {
   if (results.data.length > 0) {
     let plural = (results.data.length > 1) ? "s" : "";
-    $('#results').append(`<h2>${results.data.length} Doctor${plural} Found:<h2>`);
+    $('#results').append(`<h1>${results.data.length} Doctor${plural} Found:<h1>`);
     results.data.forEach(function(result) {
       displayDoctor(result);
     });
   } else {
-    $('#results').append(`<h2>No Doctors Found</h2>`);
+    $('#results').append(`<h1>No Doctors Found</h1>`);
   }
 }
 
 function displayError(error) {
-  $('#results').append(`<h2>Something Went Wrong!<h2>`);
-  $('#results').append(`<h4>Error: ${error.message}<h4>`);
+  $('#results').append(`<h1>Something Went Wrong!<h1>`);
+  $('#results').append(`<h3>Error: ${error.message}<h3>`);
 }
 
 $(document).ready(function() {
