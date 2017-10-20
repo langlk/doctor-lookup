@@ -48,7 +48,6 @@ function displayDoctor(result) {
 }
 
 function displayResults(results) {
-  $('#results').html("");
   if (results.data.length > 0) {
     let plural = (results.data.length > 1) ? "s" : "";
     $('#results').append(`<h2>${results.data.length} Doctor${plural} Found:<h2>`);
@@ -61,13 +60,16 @@ function displayResults(results) {
 }
 
 function displayError(error) {
-  console.log(error);
+  $('#results').append(`<h2>Something Went Wrong!<h2>`);
+  $('#results').append(`<h4>Error: ${error.message}<h4>`);
 }
 
 $(document).ready(function() {
   let doctorLookup = new DoctorLookup();
   $('#doctor-search').submit(function(event) {
     event.preventDefault();
+    $('#results').html("");
+
     let searchType = $('#search-type').val();
     let searchTerm = $('#search-term').val();
     if (searchType === "name") {
