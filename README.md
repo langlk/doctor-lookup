@@ -10,7 +10,7 @@ _A site that allows a user to search for doctors in the Seattle area. Has option
 
 ## Setup/Installation Requirements
 
-_In order to prevent publishing of API keys, this app must be downloaded and built on your machine. To do so, follow the instructions below._
+_In order to prevent publishing of API keys, this app must be downloaded and rebuilt on your machine. To do so, follow the instructions below._
 
 * Clone this repository.
 * Add a ```.env``` file to the project root directory.
@@ -28,7 +28,7 @@ _In order to prevent publishing of API keys, this app must be downloaded and bui
   gulp build
   gulp serve
   ```
-* The site will now be running at ```localhost:3000```
+* The site should open in your default web browser at ```localhost:3000``` (or similar localhost-- success message will include access URL).
 
 ## Specifications
 
