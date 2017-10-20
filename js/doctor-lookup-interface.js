@@ -17,7 +17,8 @@ function displayDoctor(result) {
   console.log(result);
   // Make div for result, add first & last name as header
   $('#results').append(`<div id='${result.npi}'></div>`);
-  $(`#${result.npi}`).append(`<h2>${result.profile.first_name} ${result.profile.last_name}, ${result.profile.title}</h2>`);
+  let titleString = result.profile.title ? ", " + result.profile.title : "";
+  $(`#${result.npi}`).append(`<h2>${result.profile.first_name} ${result.profile.last_name}${titleString}</h2>`);
 
   // Display information about each of doctor's practice
   $(`#${result.npi}`).append(`<h3>Practices</h3><ul></ul>`);
@@ -26,10 +27,11 @@ function displayDoctor(result) {
     let accepting = practice.accepts_new_patients ? "" : "Not";
     $(`#${result.npi} ul li`).last().append(`<h5 class="${accepting}accepting">${accepting} Accepting New Patients</h5>`);
 
+    let street2 = practice.visit_address.street2 ? practice.visit_address.street2 : "";
     $(`#${result.npi} ul li`).last().append(`<h5>Address:</h5>
       <div class="address">
         <p>${practice.visit_address.street}</p>
-        <p>${practice.visit_address.street2}</p>
+        <p>${street2}</p>
         <p>${practice.visit_address.city}, ${practice.visit_address.state} ${practice.visit_address.zip}</p>
       </div>`);
 
