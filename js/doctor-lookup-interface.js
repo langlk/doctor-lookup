@@ -35,16 +35,16 @@ function displayDoctor(result) {
         <p>${practice.visit_address.city}, ${practice.visit_address.state} ${practice.visit_address.zip}</p>
       </div>`);
 
-    $(`#${result.npi} ul li`).last().append(`<h5>Phones:</h5>`);
+    $(`#${result.npi} ul li`).last().append(`<h5>Phones:</h5><div class="phone"></div>`);
     practice.phones.forEach(function(phone) {
-      $(`#${result.npi} ul li`).last().append(`<p class="phone"><strong>${formatKey(phone.type)}:</strong> ${formatPhone(phone.number)}</p>`);
+      $(`#${result.npi} .phone`).last().append(`<p><strong>${formatKey(phone.type)}:</strong> ${formatPhone(phone.number)}</p>`);
     });
 
-    $(`#${result.npi} ul li`).last().append(`<h5>Website:</h5>`);
+    $(`#${result.npi} ul li`).last().append(`<h5>Website:</h5><div class="website"></div>`);
     if (practice.website) {
-      $(`#${result.npi} ul li`).last().append(`<p><a href="${practice.website}">${practice.website}</a></p>`);
+      $(`#${result.npi} .website`).last().append(`<p><a href="${practice.website}">${practice.website}</a></p>`);
     } else {
-      $(`#${result.npi} ul li`).last().append("<p class='no-site'>Not Provided</p>");
+      $(`#${result.npi} .website`).last().append("<p class='no-site'>Not Provided</p>");
     }
   });
 }
