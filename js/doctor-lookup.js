@@ -1,10 +1,10 @@
 const apiKey = require('./../.env').apiKey;
 
 export class DoctorLookup {
-  searchName(name) {
+  search(type, term) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      let url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&location=47.606%2C-122.332%2C50&sort=best-match-asc&skip=0&limit=10&user_key=${apiKey}`;
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?${type}=${term}&location=47.606%2C-122.332%2C50&sort=best-match-asc&skip=0&limit=10&user_key=${apiKey}`;
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);

@@ -72,8 +72,8 @@ $(document).ready(function() {
 
     let searchType = $('#search-type').val();
     let searchTerm = $('#search-term').val();
-    if (searchType === "name") {
-      let searchPromise = doctorLookup.searchName(searchTerm);
+    // if (searchType === "name") {
+      let searchPromise = doctorLookup.search(searchType, searchTerm);
       searchPromise.then(function(response) {
         let results = JSON.parse(response);
         displayResults(results);
@@ -81,6 +81,6 @@ $(document).ready(function() {
       .catch(function(error) {
         displayError(error);
       });
-    }
+    // }
   });
 });
