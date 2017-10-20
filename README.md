@@ -16,7 +16,7 @@ _In order to prevent publishing of API keys, this app must be downloaded and bui
 * Add a ```.env``` file to the project root directory.
 * Add your key for the [BetterDoctor API](https://developer.betterdoctor.com/) to ```.env``` in the following format:
   ```
-  export.apiKey = [YOUR API KEY];
+  exports.apiKey = "[YOUR API KEY]";
   ```
 * Make sure you have Node.js and gulp installed.
     * Instructions for installing Node.js can be found [here](https://www.learnhowtoprogram.com/javascript/getting-started-with-javascript-2f9a73dc-b7f5-4a22-9101-e69d49f552ac/installing-node-js).
