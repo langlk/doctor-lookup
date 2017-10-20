@@ -74,15 +74,14 @@ $(document).ready(function() {
 
     let searchType = $('#search-type').val();
     let searchTerm = $('#search-term').val();
-    // if (searchType === "name") {
-      let searchPromise = doctorLookup.search(searchType, searchTerm);
-      searchPromise.then(function(response) {
-        let results = JSON.parse(response);
-        displayResults(results);
-      })
-      .catch(function(error) {
-        displayError(error);
-      });
-    // }
+    
+    let searchPromise = doctorLookup.search(searchType, searchTerm);
+    searchPromise.then(function(response) {
+      let results = JSON.parse(response);
+      displayResults(results);
+    })
+    .catch(function(error) {
+      displayError(error);
+    });
   });
 });
