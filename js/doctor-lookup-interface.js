@@ -48,9 +48,16 @@ function displayDoctor(result) {
 }
 
 function displayResults(results) {
-  results.data.forEach(function(result) {
-    displayDoctor(result);
-  });
+  $('#results').html("");
+  if (results.data.length > 0) {
+    let plural = (results.data.length > 1) ? "s" : "";
+    $('#results').append(`<h2>${results.data.length} Doctor${plural} Found:<h2>`);
+    results.data.forEach(function(result) {
+      displayDoctor(result);
+    });
+  } else {
+    $('#results').append(`<h2>No Doctors Found</h2>`);
+  }
 }
 
 function displayError(error) {
