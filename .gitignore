@@ -4,3 +4,4 @@ coverage/
 tmp/
 bower_components/
 .env
+build/
