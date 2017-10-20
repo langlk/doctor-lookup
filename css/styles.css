@@ -1,10 +1,25 @@
+html {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
+  background-color: transparent;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
 }
 
 .container {
   width: 80%;
+  min-height: 100vh;
+  background-color: rgba(231, 234, 249, 0.88);
+}
+
+.page-header {
+  border-color: #adb3ce;
 }
 
 .page-header h1 {
@@ -12,6 +27,11 @@ body {
   font-size: 3.5em;
   text-align: center;
   margin-bottom: 1.2rem;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.54);
+  border-color: #adb3ce;
 }
 
 #doctor-search {
@@ -26,10 +46,19 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-color: #838fc5;
+  border-color: #7182c5;
+  color: #dee2f4;
+}
+
+#doctor-search .btn:hover {
+  background-color: #59659c;
+  border-color: #41508a;
+  color: #bec8f3;
 }
 
 #results {
-  border-top: 1px solid #eee;
+  border-top: 1px solid #adb3ce;
 }
 
 #results h1 {
@@ -47,8 +76,8 @@ body {
 
 #results > div h2 {
   font-size: 28px;
-  border-bottom: 1px solid #eee;
-  border-top: 1px solid #eee;
+  border-bottom: 1px solid #adb3ce;
+  border-top: 1px solid #adb3ce;
   padding: .4em 0px;
 }
 
@@ -76,8 +105,8 @@ body {
   display: block;
   padding-right: 1em;
   padding-left: 1em;
-  border-right: 1px solid #eee;
-  border-left: 1px solid #eee;
+  border-right: 1px solid #adb3ce;
+  border-left: 1px solid #adb3ce;
   margin-bottom: 1.3em;
 }
 
@@ -93,6 +122,11 @@ body {
 .notaccepting {
   color: #a71717;
 }
+
+.no-site {
+  color: #676767;
+}
+
 @media screen and (max-width: 625px) {
   .container {
     width: 90%;
