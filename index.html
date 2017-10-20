@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="build/js/vendor.min.js" charset="utf-8"></script>
+    <script src="build/js/app.js" charset="utf-8"></script>
+    <meta charset="utf-8">
+    <title>Doctor Lookup</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Doctor Lookup</h1>
+        <p>Find Doctors in the Seattle Area!</p>
+      </div>
+
+      <form id="doctor-search">
+        <div class="form-group">
+          <label for="search-type">Search By:</label>
+          <select id="search-type" class="form-control" name="search-type">
+            <option value="name">Doctor Name</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="search-term">For:</label>
+          <input id="search-term" type="text" name="search-term" class="form-control">
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -26,8 +26,8 @@ _._
 
 ## Planned Functionality (Not yet complete)
 
-* Program provides a list of doctors in the Seattle area that treat a given medical issue.
 * Program provides a list of doctors in the Seattle area that match a given name.
+* Program provides a list of doctors in the Seattle area that treat a given medical issue.
 * Program outputs the following information about each doctor:
   * First Name
   * Last Name
